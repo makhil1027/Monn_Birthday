@@ -82,3 +82,21 @@ a {
   font-family: monospace;
 
 }
+/* === Floating red hearts styles === */
+.floating-heart {
+  position: fixed;       /* stays in place while scrolling */
+  font-size: 20px;       /* initial size, we will randomize later */
+  animation: float 6s linear infinite; /* float animation */
+  opacity: 0.8;          /* slightly transparent */
+  pointer-events: none;  /* hearts don’t block clicks */
+  z-index: 9999;         /* always on top */
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+
