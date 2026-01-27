@@ -1,19 +1,22 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000; /* solid black background, images removed */
-  color: white;
+  background-color: #a0c4ff; /* changed from black to soft blue */
+  color: black; /* text visible on soft blue background */
   font-size: 14px;
   font-family: sans-serif;
   overflow: auto;
 }
+
 a {
-  color: white;
+  color: black; /* links visible on soft blue */
   font-size: 14px;
 }
+
 #main {
   width: 100%;
 }
+
 #wrap {
   position: relative;
   margin: 0 auto;
@@ -21,6 +24,7 @@ a {
   height: 680px;
   margin-top: 10px;
 }
+
 #text {
   width: 272px;
   height: 560px;
@@ -28,6 +32,7 @@ a {
   top: 80px;
   position: absolute;
 }
+
 #code {
   display: none;
   color: rgb(196, 255, 255);
@@ -37,6 +42,7 @@ a {
   font-size: larger;
   font-weight: bolder;
 }
+
 #clock-box {
   position: absolute;
   left: 60px;
@@ -44,33 +50,42 @@ a {
   font-size: 28px;
   display: none;
 }
+
 #clock-box a {
   font-size: 28px;
   text-decoration: none;
 }
+
 #clock {
   margin-left: 48px;
 }
+
 #clock .digit {
   font-size: 64px;
 }
+
 #canvas {
   margin: 0 auto;
   width: 1100px;
   height: 680px;
 }
+
 #error {
   margin: 0 auto;
   text-align: center;
   margin-top: 60px;
   display: none;
 }
+
 .hand {
   cursor: pointer;
 }
+
 .say {
   margin-left: 5px;
+  color: black; /* make sure message text is visible */
 }
+
 .space {
   margin-right: 150px;
 }
@@ -80,5 +95,5 @@ a {
   margin-top:450px;
   font-size: 25px;
   font-family: monospace;
-
+  color: black; /* message text visible */
 }
