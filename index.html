@@ -28,22 +28,22 @@
             (<a href="http://firefox.com.cn/download/">Firefox</a>)
         </div>
 
-        <audio autoplay="autoplay" height="100" width="100" id="myAudio">
+        <audio autoplay="autoplay" id="myAudio">
             <source src="aud.mp3" type="audio/mp3" />
-            <embed height="100" width="100" src="aud.mp3" />
+            <embed src="aud.mp3" />
         </audio>
 
         <div id="wrap">
             <div id="text">
                 <div id="code">
-                   <span class="say" data-text="Hey Monn 💞"></span><br>
-                   <span class="say" data-text="Happy Birthday 🎈"></span><br>
-                   <span class="say" data-text="May God bless you 🍀"></span><br>
-                   <span class="say" data-text="And give u many happiness 💕"></span><br>
-                   <span class="say" data-text="Just saying... you're pretty awesome ❤️"></span><br>
-                   <span class="say" data-text="Sending good vibes and maybe a wink 😏"></span><br>
-                   <span class="say" data-text="Hope u have a great day with me and Lassi ❤️😘"></span><br>
-                   <span class="say" data-text="Promising you that I will be there forever in your love ❤️😘"></span><br>
+                    <span class="say" data-text="Hey Monn 💞"></span><br>
+                    <span class="say" data-text="Happy Birthday 🎈"></span><br>
+                    <span class="say" data-text="May God bless you 🍀"></span><br>
+                    <span class="say" data-text="And give u many happiness 💕"></span><br>
+                    <span class="say" data-text="Just saying... you're pretty awesome ❤️"></span><br>
+                    <span class="say" data-text="Sending good vibes and maybe a wink 😏"></span><br>
+                    <span class="say" data-text="Hope u have a great day with me and Lassi ❤️😘"></span><br>
+                    <span class="say" data-text="Promising you that I will be there forever in your love ❤️😘"></span><br>
                 </div>
             </div>
 
@@ -158,15 +158,14 @@
             foot.draw();
             tree.snapshot("p2",500,0,610,680);
             canvas.parent().css("background","url("+tree.toDataURL('image/png')+")");
-            canvas.css("background","#ffe");
+            canvas.css("background","#000"); // black background
             $await(Jscex.Async.sleep(300));
             canvas.css("background","none");
         }));
 
-        // Typing after tree
         var textAnimate = eval(Jscex.compile("async", function(){
             $("#code").show();
-            typeMessages();
+            typeMessages(); // start typing after tree finishes
         }));
 
         var runAsync = eval(Jscex.compile("async", function(){
@@ -183,4 +182,3 @@
 
 </body>
 </html>
-
