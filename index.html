@@ -181,8 +181,34 @@
         runAsync().start();
     })();
     </script>
+<script>
+function createFloatingHeart() {
+  // Create a new heart element
+  const heart = document.createElement("div");
+  heart.classList.add("floating-heart");
+  heart.innerText = "❤️"; // red heart
+
+  // Random horizontal position
+  heart.style.left = Math.random() * window.innerWidth + "px";
+
+  // Random size between 15px and 35px
+  const size = Math.random() * 20 + 15;
+  heart.style.fontSize = size + "px";
+
+  // Add heart to page
+  document.body.appendChild(heart);
+
+  // Remove heart after 6 seconds (animation duration)
+  setTimeout(() => heart.remove(), 6000);
+}
+
+// Create a new heart every 500ms
+setInterval(createFloatingHeart, 500);
+</script>
+	
 </body>
 
 </html>
+
 
 
