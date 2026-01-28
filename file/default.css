@@ -83,3 +83,25 @@ a {
 
 
 }
+/* Floating red hearts */
+.floating-heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  pointer-events: none;
+  animation: floatUp 6s linear forwards;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
